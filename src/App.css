@@ -1,0 +1,705 @@
+@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+.navbar {
+  display: flex;
+  backdrop-filter: blur(8px); /* Optional: Glass effect */
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  top: 0;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-family: "Bebas Neue";
+  color: white;
+  filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.5));
+}
+
+.nav-btns {
+  display: flex;
+  gap: 32px;
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  font-family: "Pacifico";
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #db4444;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+.first-body {
+  display: flex;
+  padding: 6%;
+  align-items: center;
+  gap: 2%;
+  margin-top: 8%;
+}
+.intro h1 {
+  font-family: "Bebas Neue";
+  font-size: 101px;
+  font-weight: 600;
+  color: white;
+  filter: drop-shadow(2px 2px #db4444);
+  animation: fade 2.5s forwards;
+}
+.intro p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "MuseoModerno";
+  color: #c7c7c7;
+  animation: fade 2.75s forwards;
+}
+.title-btns {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  animation: fade 2.75s forwards;
+}
+.title-pic {
+  width: 60%;
+  border-radius: 16px;
+  background: #c7c7c7;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade 2.75s forwards;
+}
+.title-pic img {
+  width: 65%;
+  align-items: center;
+  filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.5));
+}
+.title-btns button {
+  border-radius: 100px;
+  padding: 20px, 6px, 20px, 24px;
+  color: white;
+  background-color: #db4444;
+  font-family: "Salsa";
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px grey;
+  cursor: pointer;
+}
+.title-btns button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 0px #db4444;
+  transition: 0.2s ease-in-out;
+}
+.title-btns button:active {
+  transform: translateY(4px);
+  background-color: cyan;
+  color: black;
+  box-shadow: none;
+}
+.intro {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.btn-circle {
+  border-radius: 100px;
+  background-color: #222222;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #db4444;
+}
+.btn-circle:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 0px #db4444;
+  transition: 0.2s ease-in-out;
+}
+.btn-circle:active {
+  transform: translateY(4px);
+  filter: invert();
+  background-color: black;
+  box-shadow: none;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: grey;
+  width: 100%;
+}
+.second-body {
+  padding: 6%;
+  color: white;
+}
+.work-title h1 {
+  font-family: "Bebas Neue";
+  font-size: 76px;
+  font-weight: 600;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.work-title p {
+  color: white;
+  font-size: 18px;
+  font-family: "MuseoModerno";
+}
+.work-project {
+  display: flex;
+  margin-top: 2%;
+  flex-direction: column;
+  gap: 7%;
+  margin-bottom: 3%;
+}
+.work-pic {
+  width: 100%;
+  padding: 3%;
+  border-radius: 12px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+}
+.work-description h2 {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Mochiy Pop One";
+  font-weight: 500;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.work-description p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "MuseoModerno";
+  margin-bottom: 2%;
+}
+.work-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  margin-top: 2%;
+}
+.work-pic img {
+  width: 100%;
+  border-radius: 12px;
+}
+.project-info {
+  color: white;
+  font-family: "poppins";
+}
+.project-info h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2%;
+  color: #db4444;
+}
+.work-info {
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.work-info p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.work-info hr {
+  color: darkgrey;
+}
+.link-git {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.link-git a {
+  text-decoration: none;
+  color: #db4444;
+}
+.link-git a:hover {
+  color: cyan;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+}
+.link-git a:active {
+  color: white;
+}
+
+.footer {
+  color: #c7c7c7;
+  font-family: "poppins";
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+.third-body {
+  display: flex;
+  flex-direction: row;
+  padding: 6%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2%;
+}
+.third-body h1 {
+  font-family: "Bebas Neue";
+  font-size: 101px;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.second-title {
+  color: white;
+  font-family: "poppins";
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.second-title h2 {
+  font-family: "Mochiy Pop One";
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.second-title p {
+  font-family: "MuseoModerno";
+  font-size: 18px;
+  font-weight: 400;
+  color: #c7c7c7;
+}
+.more-info {
+  color: #db4444;
+  text-decoration: none;
+}
+.more-info:hover {
+  color: cyan;
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+}
+.about-pic {
+  background: #c7c7c7;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 13px;
+  width: 90%;
+  position: relative;
+}
+.second-pic {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.second-pic:hover {
+  opacity: 1;
+}
+.about2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  animation: fade 2.5s forwards;
+}
+.about-skill {
+  font-family: "Bebas Neue";
+  font-size: 76px;
+  font-weight: 600;
+  color: #ffffff;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.skill-icon {
+  display: flex;
+  gap: 30px;
+}
+.about2 hr {
+  border: 1px solid #484848;
+  width: 100%;
+}
+.about-info {
+  display: flex;
+  gap: 200px;
+  padding: 5%;
+  justify-content: center;
+}
+.about-info h1 {
+  font-family: "Bebas Neue";
+  font-size: 101px;
+  font-weight: 600;
+  color: #ffffff;
+  width: 100%;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.about-para {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-para h3 {
+  font-family: "Mochiy Pop One";
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.about-para p {
+  font-family: "MuseoModerno";
+  font-size: 18px;
+  font-weight: 400;
+  color: #c7c7c7;
+}
+.download button {
+  background-color: #db4444;
+  color: white;
+  font-weight: 600;
+  font-family: "Salsa";
+  font-size: 15px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.contact-info {
+  display: flex;
+  padding: 6%;
+  justify-content: space-evenly;
+}
+.contact-info h1 {
+  font-family: "Bebas Neue";
+  font-size: 101px;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+.contact-icons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-icons img {
+  width: 32px;
+  height: 32px;
+}
+.single-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.single-icon a {
+  text-decoration: none;
+  font-family: "poppins";
+  font-size: 15px;
+  color: #c7c7c7;
+}
+.single-icon p {
+  font-family: "poppins";
+  font-size: 15px;
+  color: #c7c7c7;
+}
+.single-icon a:hover {
+  color: cyan;
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
+}
+.about-exp {
+  display: flex;
+  gap: 200px;
+  padding: 5%;
+  justify-content: center;
+}
+.about-exp h2 {
+  font-family: "Bebas Neue";
+  font-size: 76px;
+  font-weight: 600;
+  color: #ffffff;
+  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+}
+
+.exp-title {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Mochiy Pop One";
+}
+.exp-title h3 {
+  font-size: 23px;
+  font-weight: 500;
+}
+.exp-title h4 {
+  color: #db4444;
+  font-size: 16px;
+  font-weight: 400;
+}
+.exp-title h5 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.top-btn-func {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+.top-btn {
+  border-radius: 100px;
+  background-color: #222222;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 2px 2px 0px #db4444;
+}
+.top-btn:hover {
+  background-color: white;
+  box-shadow: 2px 2px 0px #db4444;
+  transition: 0.2s ease-in-out;
+}
+.top-btn:active {
+  transform: translateY(4px);
+  background-color: cyan;
+  color: black;
+  box-shadow: none;
+}
+.navbar3 {
+  display: none;
+}
+.navbar4 {
+  display: none;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.dropdown-btn.open {
+  transform: rotate(180deg);
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  width: 120px;
+  background-color: #db4444;
+  padding: 1%;
+  border-radius: 5px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown-list.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  font-family: "Pacifico";
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  filter: drop-shadow(1px 1px black);
+  text-decoration: none;
+  color: white;
+  padding: 8px 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+/*responsive section*/
+
+@media (max-width: 900px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .title-pic {
+    display: none;
+  }
+  .first-pic {
+    display: none;
+  }
+  .intro {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .intro h1 {
+    font-size: 70px;
+    text-align: center;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar2 {
+    display: none;
+  }
+  .navbar3 {
+    display: block;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+  }
+  .navbar4 {
+    display: block;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+  }
+}
+@media (max-width: 666px) {
+  .work-title h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+  .work-project {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .work-project p {
+    font-size: 15px;
+  }
+  .project-info {
+    font-size: 13px;
+  }
+  .link-git img {
+    width: 20px;
+    height: 20px;
+  }
+  .work-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .work-description p {
+    margin-bottom: 20px;
+  }
+  .third-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .third-body h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  .second-title {
+    text-align: center;
+  }
+  .second-title h2 {
+    font-size: 18px;
+  }
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact-info h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  .contact-icons a {
+    font-size: 15px;
+  }
+  .contact-icons p {
+    font-size: 15px;
+  }
+  .contact-icons img {
+    width: 25px;
+    height: 25px;
+  }
+  .contact-icons {
+    margin-top: 15px;
+  }
+  .footer {
+    font-size: 9px;
+    padding: 10px;
+  }
+  .about2 {
+    width: 100%;
+  }
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+}

@@ -1,0 +1,121 @@
+import { useEffect } from "react";
+import Navbar2 from "../components/Navbar2";
+import Navbar4 from "../components/Navbar4";
+import Pic2 from "../icons/pic2.png";
+import JS from "../icons/js.png";
+import TS from "../icons/ts.png";
+import React2 from "../icons/react.png";
+import Mongo from "../icons/mongo.png";
+import Express from "../icons/express.png";
+import Node from "../icons/node.png";
+import link from "../icons/linkin.png";
+import git from "../icons/github.png";
+import Footer from "../components/Footer";
+import TopBtn from "../components/TopBtn";
+import Contact from "../components/Contact";
+
+const PDF_file = "http://localhost:3001/CV.pdf";
+const About2 = () => {
+  const downloadFile = (url) => {
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const fileName = url.split("/").pop();
+        const aTag = document.createElement("a");
+        aTag.href = blobURL;
+        aTag.setAttribute("download", fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+      });
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <div>
+      <Navbar2 />
+      <Navbar4 />
+      <div className="about2">
+        <div className="about-info">
+          <h1>ABOUT ME</h1>
+          <div className="about-para">
+            <h3>I'm a front-end developer based in Beirut.</h3>
+            <p>
+              I am a front-end developer based in Beirut looking for exciting
+              opportunities. Likes to focus on accessibility when developing.
+              Passionate and curious about solving problems. Currently, I’m
+              exploring Reactjs & bit of Designing. While I am not programming,
+              I enjoy playing football and doing other sports activities.
+              Learning more to improve my skills.
+            </p>
+            <div className="title-btns">
+              <div className="download">
+                <button
+                  onClick={() => {
+                    downloadFile(PDF_file);
+                  }}
+                >
+                  DOWNLOAD CV
+                </button>
+              </div>
+              <div className="btn-circle">
+                <a href="https://github.com/NayefGh">
+                  <img src={git} alt="" />
+                </a>
+              </div>
+              <div className="btn-circle">
+                <a href="https://www.linkedin.com/in/nayef-ghtaimy-5a8298303/">
+                  <img src={link} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="about-pic">
+          <img className="first-pic" src={Pic2} alt="" />
+        </div>
+        <h2 id="skills" className="about-skill">
+          MY SKILLS
+        </h2>
+        <div className="skill-icon">
+          <img src={JS} alt="" />
+          <img src={TS} alt="" />
+          <img src={React2} alt="" />
+          <img src={Node} alt="" />
+          <img src={Express} alt="" />
+          <img src={Mongo} alt="" />
+        </div>
+        <hr />
+        <div className="about-info" id="exp">
+          <h1>MY EXPERIENCE</h1>
+          <div className="about-para">
+            <div className="exp-title">
+              <div className="exp-right">
+                <h3>Front End Developer Intern</h3>
+                <h4>areeba/ Beirut-Lebanon</h4>
+              </div>
+              <h5>March 2024 - May 2024</h5>
+            </div>
+            <p>
+              Developed responsive web pages using React JS, JavaScript, and
+              TypeScript, enhancing user experience. Collaborated with design
+              and backend teams to ensure seamless integration and
+              functionality. Also, optimized web performance, reducing load
+              times and improving overall site efficiency. Implemented best
+              practices in front-end development, contributing to higher code
+              quality and maintainability
+            </p>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <Contact />
+      <TopBtn />
+      <Footer />
+    </div>
+  );
+};
+
+export default About2;
