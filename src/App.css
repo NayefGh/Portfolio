@@ -176,6 +176,7 @@ hr {
 .second-body {
   padding: 6%;
   color: white;
+  animation: fade 3s forwards;
 }
 .work-title h1 {
   font-family: "Bebas Neue";
@@ -364,6 +365,26 @@ hr {
 .skill-icon {
   display: flex;
   gap: 30px;
+  justify-content: space-evenly;
+}
+.skill-indiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+  text-align: center;
+}
+.skill-indiv img {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+}
+.skill-indiv p {
+  color: #c7c7c7;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "MuseoModerno";
 }
 .about2 hr {
   border: 1px solid #484848;
@@ -606,20 +627,30 @@ hr {
     display: none;
   }
   .navbar3 {
-    display: block;
-    padding: 1%;
     display: flex;
-    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    top: 0;
+    padding: 2%;
+    display: flex;
     align-items: center;
-    /* background-color: red; */
+    justify-content: space-between;
   }
   .navbar4 {
-    display: block;
-    padding: 1%;
     display: flex;
-    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    top: 0;
+    padding: 2%;
+    display: flex;
     align-items: center;
-    /* background-color: red; */
+    justify-content: space-between;
   }
 }
 @media (max-width: 666px) {
@@ -701,5 +732,40 @@ hr {
     align-items: center;
     text-align: center;
     gap: 0;
+    width: 100%;
+  }
+  .about-info h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .about-para h3 {
+    font-size: 15px;
+  }
+  .about-para p {
+    font-size: 12px;
+  }
+  .title-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .download button {
+    width: 80%;
+    height: 60px;
+    font-size: 12px;
+  }
+  .about-skill {
+    font-size: 60px;
+  }
+  .skill-icon{
+    padding: 2%;
+  }
+  .skill-indiv img{
+    width: 40px;
+    height: 40px;
+  }
+  .skill-indiv p{
+    font-size: 13px;
   }
 }

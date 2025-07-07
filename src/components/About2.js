@@ -1,26 +1,24 @@
 import { useEffect } from "react";
 import Navbar2 from "../components/Navbar2";
 import Navbar4 from "../components/Navbar4";
+import js from "../icons/js.png";
+import ht from "../icons/ht.png";
+import css from "../icons/css.png";
+import react from "../icons/rt.png";
 import Pic2 from "../icons/pic2.png";
-import JS from "../icons/js.png";
-import TS from "../icons/ts.png";
-import React2 from "../icons/react.png";
-import Mongo from "../icons/mongo.png";
-import Express from "../icons/express.png";
-import Node from "../icons/node.png";
 import link from "../icons/linkin.png";
 import git from "../icons/github.png";
 import Footer from "../components/Footer";
 import TopBtn from "../components/TopBtn";
 import Contact from "../components/Contact";
 
-const PDF_file = "http://localhost:3001/CV.pdf";
+const PDF_file = process.env.PUBLIC_URL + "/CV.pdf";
 const About2 = () => {
   const downloadFile = (url) => {
     fetch(url)
       .then((response) => response.blob())
       .then((blob) => {
-        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const blobURL = window.URL.createObjectURL(blob);
         const fileName = url.split("/").pop();
         const aTag = document.createElement("a");
         aTag.href = blobURL;
@@ -30,6 +28,7 @@ const About2 = () => {
         aTag.remove();
       });
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -80,12 +79,22 @@ const About2 = () => {
           MY SKILLS
         </h2>
         <div className="skill-icon">
-          <img src={JS} alt="" />
-          <img src={TS} alt="" />
-          <img src={React2} alt="" />
-          <img src={Node} alt="" />
-          <img src={Express} alt="" />
-          <img src={Mongo} alt="" />
+          <div className="skill-indiv">
+            <img src={js} alt="" />
+            <p>Javascript</p>
+          </div>
+          <div className="skill-indiv">
+            <img src={ht} alt="" />
+            <p>HTML</p>
+          </div>
+          <div className="skill-indiv">
+            <img src={css} alt="" />
+            <p>Cascading Style Sheets (CSS)</p>
+          </div>
+          <div className="skill-indiv">
+            <img src={react} alt="" />
+            <p>React</p>
+          </div>
         </div>
         <hr />
         <div className="about-info" id="exp">
