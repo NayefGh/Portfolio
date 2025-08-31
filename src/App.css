@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,11 +12,11 @@
 }
 
 body {
-  background-color: black;
+  background-color: #000814;
 }
 .navbar {
   display: flex;
-  backdrop-filter: blur(8px); /* Optional: Glass effect */
+  backdrop-filter: blur(8px);
   position: fixed;
   width: 100%;
   height: 60px;
@@ -29,8 +29,8 @@ body {
 }
 .title {
   font-family: "Bebas Neue";
-  color: white;
-  filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.5));
+  color: #f0f7ee;
+  filter: drop-shadow(2px 2px 2px #003566);
 }
 
 .nav-btns {
@@ -38,17 +38,31 @@ body {
   gap: 32px;
   padding: 2%;
   font-size: 20px;
-  color: white;
-  font-family: "Pacifico";
+  color: #eaeaea;
+  font-family: "Righteous";
 }
 .btn {
-  color: white;
+  color: #f0f7ee;
   text-decoration: none;
   position: relative;
   cursor: pointer;
 }
-.btn:hover {
-  color: #db4444;
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd60a;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.btn:hover::after {
+  transform: scaleX(1);
+}
+/* .btn:hover {
+  filter: drop-shadow(2px 2px #db4444);
   transform: scale(1.2);
   transition: 0.3s ease-in-out;
 }
@@ -59,7 +73,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-}
+} */
 .first-body {
   display: flex;
   padding: 6%;
@@ -71,8 +85,8 @@ body {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: white;
-  filter: drop-shadow(2px 2px #db4444);
+  color: #f0f7ee;
+  filter: drop-shadow(2px 2px #ffc300);
   animation: fade 2.5s forwards;
 }
 .intro p {
@@ -105,28 +119,35 @@ body {
 }
 .title-btns button {
   border-radius: 100px;
-  padding: 20px, 6px, 20px, 24px;
-  color: white;
-  background-color: #db4444;
+  color: black;
+  background-color: white;
   font-family: "Salsa";
   padding: 15px;
+  background-image: linear-gradient(60deg, #ffc300, #003566);
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-image 0.4s, background-size 0.4s, color 0.3s;
   font-size: 15px;
   font-weight: 700;
-  box-shadow: 2px 2px 0px grey;
   cursor: pointer;
 }
 .title-btns button:hover {
-  background-color: white;
+  background-size: 100% 100%;
+  background-position-x: left;
+  color: #c7c7c7;
+}
+/* .title-btns button:hover {
+  background-color: #ffd60a;
   color: black;
-  box-shadow: 2px 2px 0px #db4444;
+  box-shadow: 2px 2px 0px #003566;
   transition: 0.2s ease-in-out;
 }
 .title-btns button:active {
   transform: translateY(4px);
-  background-color: cyan;
+  background-color: #db4444;
   color: black;
   box-shadow: none;
-}
+} */
 .intro {
   display: flex;
   gap: 20px;
@@ -146,19 +167,18 @@ body {
 
 .btn-circle {
   border-radius: 100px;
-  background-color: #222222;
+  background-color: #003566;
   width: 54px;
   height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #db4444;
+  box-shadow: 2px 2px 0px #ffc300;
 }
 .btn-circle:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 2px 2px 0px #db4444;
+  background-color: black;
+  box-shadow: 2px 2px 0px #003566;
   transition: 0.2s ease-in-out;
 }
 .btn-circle:active {
@@ -182,10 +202,11 @@ hr {
   font-family: "Bebas Neue";
   font-size: 76px;
   font-weight: 600;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  color: #ffc300;
+  filter: drop-shadow(2px 2px #003566);
 }
 .work-title p {
-  color: white;
+  color: #c7c7c7;
   font-size: 18px;
   font-family: "MuseoModerno";
 }
@@ -211,7 +232,7 @@ hr {
   font-size: 32px;
   font-family: "Mochiy Pop One";
   font-weight: 500;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  filter: drop-shadow(1px 1px #ffd60a);
 }
 .work-description p {
   font-size: 16px;
@@ -231,14 +252,14 @@ hr {
   border-radius: 12px;
 }
 .project-info {
-  color: white;
+  color: #ffd60a;
   font-family: "poppins";
 }
 .project-info h1 {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 2%;
-  color: #db4444;
+  color: #ffd60a;
 }
 .work-info {
   display: flex;
@@ -262,15 +283,15 @@ hr {
 }
 .link-git a {
   text-decoration: none;
-  color: #db4444;
+  color: #ffc300;
 }
 .link-git a:hover {
-  color: cyan;
+  color: #db4444;
   transition: 0.2s ease-in-out;
   text-decoration: underline;
 }
 .link-git a:active {
-  color: white;
+  color: #003566;
 }
 
 .footer {
@@ -294,12 +315,12 @@ hr {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: white;
   width: 100%;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  color: #ffc300;
+  filter: drop-shadow(2px 2px #003566);
 }
 .second-title {
-  color: white;
+  color: #c7c7c7;
   font-family: "poppins";
   display: flex;
   flex-direction: column;
@@ -310,6 +331,7 @@ hr {
   font-size: 32px;
   font-weight: 500;
   color: #ffffff;
+  filter: drop-shadow(1px 1px #ffc300);
 }
 .second-title p {
   font-family: "MuseoModerno";
@@ -318,13 +340,16 @@ hr {
   color: #c7c7c7;
 }
 .more-info {
-  color: #db4444;
+  color: #ffc300;
   text-decoration: none;
 }
 .more-info:hover {
-  color: cyan;
+  color: #db4444;
   text-decoration: underline;
   transition: 0.2s ease-in-out;
+}
+.more-info:active {
+  color: #003566;
 }
 .about-pic {
   background: #c7c7c7;
@@ -359,8 +384,8 @@ hr {
   font-family: "Bebas Neue";
   font-size: 76px;
   font-weight: 600;
-  color: #ffffff;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  color: #ffc300;
+  filter: drop-shadow(2px 2px #003566);
 }
 .skill-icon {
   display: flex;
@@ -400,9 +425,9 @@ hr {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: #ffffff;
+  color: #ffc300;
   width: 100%;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  filter: drop-shadow(2px 2px #003566);
 }
 .about-para {
   display: flex;
@@ -414,6 +439,7 @@ hr {
   font-size: 32px;
   font-weight: 500;
   color: #ffffff;
+  filter: drop-shadow(1px 1px #ffc300);
 }
 .about-para p {
   font-family: "MuseoModerno";
@@ -422,8 +448,8 @@ hr {
   color: #c7c7c7;
 }
 .download button {
-  background-color: #db4444;
-  color: white;
+  background-color: white;
+  color: black;
   font-weight: 600;
   font-family: "Salsa";
   font-size: 15px;
@@ -438,9 +464,9 @@ hr {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: white;
   width: 100%;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
+  color: #ffc300;
+  filter: drop-shadow(2px 2px #003566);
 }
 .contact-icons {
   width: 100%;
@@ -469,9 +495,12 @@ hr {
   color: #c7c7c7;
 }
 .single-icon a:hover {
-  color: cyan;
+  color: #db4444;
   text-decoration: underline;
   transition: 0.3s ease-in-out;
+}
+.single-icon a:active{
+  color: #003566;
 }
 .about-exp {
   display: flex;
@@ -479,13 +508,7 @@ hr {
   padding: 5%;
   justify-content: center;
 }
-.about-exp h2 {
-  font-family: "Bebas Neue";
-  font-size: 76px;
-  font-weight: 600;
-  color: #ffffff;
-  filter: drop-shadow(2px 2px rgba(219, 68, 68, 1));
-}
+
 
 .exp-title {
   display: flex;
@@ -499,7 +522,7 @@ hr {
   font-weight: 500;
 }
 .exp-title h4 {
-  color: #db4444;
+  color: #003566;
   font-size: 16px;
   font-weight: 400;
 }
@@ -515,7 +538,7 @@ hr {
 }
 .top-btn {
   border-radius: 100px;
-  background-color: #222222;
+  background-color: #003566;
   width: 40px;
   height: 40px;
   display: flex;
@@ -527,17 +550,16 @@ hr {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  box-shadow: 2px 2px 0px #db4444;
+  box-shadow: 2px 2px 0px #ffc300;
 }
 .top-btn:hover {
-  background-color: white;
-  box-shadow: 2px 2px 0px #db4444;
+  background-color: black;
+  box-shadow: 2px 2px 0px #003566;
   transition: 0.2s ease-in-out;
 }
 .top-btn:active {
   transform: translateY(4px);
-  background-color: cyan;
-  color: black;
+  background-color:#db4444;
   box-shadow: none;
 }
 .navbar3 {
@@ -570,9 +592,9 @@ hr {
   position: absolute;
   top: 10px;
   right: 40px;
-  width: 120px;
-  background-color: #db4444;
-  padding: 1%;
+  width: 150px;
+  background-color: #003566;
+  padding: 2%;
   border-radius: 5px;
   z-index: 100;
   opacity: 0;
@@ -587,13 +609,13 @@ hr {
 }
 
 .dropdown-item {
-  font-family: "Pacifico";
+  font-family: "Righteous";
   font-size: 15px;
   display: block;
   text-align: center;
-  filter: drop-shadow(1px 1px black);
+  filter: drop-shadow(2px 2px #000814);
   text-decoration: none;
-  color: white;
+  color: #ffc300;
   padding: 8px 8px;
   transition: background 0.3s ease-in-out;
 }
@@ -618,6 +640,7 @@ hr {
   }
   .intro h1 {
     font-size: 70px;
+    margin-top: 20px;
     text-align: center;
   }
   .navbar {
@@ -758,14 +781,14 @@ hr {
   .about-skill {
     font-size: 60px;
   }
-  .skill-icon{
+  .skill-icon {
     padding: 2%;
   }
-  .skill-indiv img{
+  .skill-indiv img {
     width: 40px;
     height: 40px;
   }
-  .skill-indiv p{
+  .skill-indiv p {
     font-size: 13px;
   }
 }
