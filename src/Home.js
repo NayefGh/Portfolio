@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import TopBtn from "./components/TopBtn";
 import { useEffect } from "react";
-import Navbar3 from "./components/Navbar3";
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,7 +13,6 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <Navbar3/>
       <Intro />
       <Work />
       <About />

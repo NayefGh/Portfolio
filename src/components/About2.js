@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Navbar2 from "../components/Navbar2";
-import Navbar4 from "../components/Navbar4";
 import js from "../icons/js.png";
 import ht from "../icons/ht.png";
 import css from "../icons/css.png";
@@ -35,7 +34,6 @@ const About2 = () => {
   return (
     <div>
       <Navbar2 />
-      <Navbar4 />
       <div className="about2">
         <div className="about-info">
           <h1>ABOUT ME</h1>
@@ -52,11 +50,12 @@ const About2 = () => {
             <div className="title-btns">
               <div className="download">
                 <button
+                  className="download-btn"
                   onClick={() => {
                     downloadFile(PDF_file);
                   }}
                 >
-                  DOWNLOAD CV
+                  DOWNLOAD RESUME
                 </button>
               </div>
               <div className="btn-circle">
@@ -98,7 +97,7 @@ const About2 = () => {
         </div>
         <hr />
         <div className="about-info" id="exp">
-          <h1>MY EXPERIENCE</h1>
+          <h2>MY EXPERIENCE</h2>
           <div className="about-para">
             <div className="exp-title">
               <div className="exp-right">

@@ -12,7 +12,7 @@ const Intro = () => {
             <p>Welcome To My Portfolio</p>
             <div className="title-btns">
               <Link to="#contact" smooth>
-                <button>CONTACT ME</button>
+                <button className="download-btn">CONTACT ME</button>
               </Link>
               <div className="btn-circle">
                 <a href="https://github.com/NayefGh">

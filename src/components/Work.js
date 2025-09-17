@@ -43,9 +43,11 @@ const Work = () => {
                   SEE ON GITHUB
                 </a>
                 <img src={git} alt="" />
+                {/* <a href="https://google.com">Check It</a> */}
               </div>
             </div>
           </div>
+          <hr />
           <div className="work-description">
             <h2>Mobile Validation Service</h2>
             <p>
@@ -79,6 +81,7 @@ const Work = () => {
               </div>
             </div>
           </div>
+          <hr />
           <div className="work-description">
             <h2>FoodTruck / Small Business Website</h2>
             <p>
@@ -109,6 +112,7 @@ const Work = () => {
               </div>
             </div>
           </div>
+          <hr />
           <div className="work-description">
             <h2>Weather Website</h2>
             <p>

@@ -14,6 +14,24 @@
 body {
   background-color: #000814;
 }
+/* .navbar {
+  display: flex;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  top: 0;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+/* .title {
+  font-family: "Bebas Neue";
+  color: #f0f7ee;
+  filter: drop-shadow(2px 2px 2px #003566);
+} */
 .navbar {
   display: flex;
   backdrop-filter: blur(8px);
@@ -26,54 +44,126 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.title {
-  font-family: "Bebas Neue";
-  color: #f0f7ee;
-  filter: drop-shadow(2px 2px 2px #003566);
+  font-family: "poppins";
 }
 
-.nav-btns {
+.navbar-container {
   display: flex;
-  gap: 32px;
-  padding: 2%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-title {
+  text-decoration: none;
+  font-family: "bebas neue";
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+.nav-title:hover {
+  color: #ffc300;
+  filter: drop-shadow(2px 2px 2px #003566);
+  transition: 0.3s ease-in-out;
+}
+/* Desktop Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
   font-size: 20px;
   color: #eaeaea;
   font-family: "Righteous";
-}
-.btn {
-  color: #f0f7ee;
   text-decoration: none;
-  position: relative;
-  cursor: pointer;
 }
-.btn::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ffd60a;
-  transform: scaleX(0);
-  transition: 0.5s;
-}
-.btn:hover::after {
-  transform: scaleX(1);
-}
-/* .btn:hover {
-  filter: drop-shadow(2px 2px #db4444);
-  transform: scale(1.2);
+
+.nav-link:hover {
+  color: #ffc300;
+  filter: drop-shadow(2px 2px 2px #003566);
   transition: 0.3s ease-in-out;
 }
-.btn::after {
-  content: "";
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  gap: 6px;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.mobile-menu {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 40px;
+  left: -100%;
   width: 100%;
-  height: 3px;
-} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 24px;
+  font-family: "Righteous";
+
+  margin-top: 10px;
+  transition: left 0.4s ease;
+  background: rgba(0, 53, 102);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 0 12px 12px;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-link {
+  color: #ffc300;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: #ff4b2b;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 .first-body {
   display: flex;
   padding: 6%;
@@ -99,7 +189,7 @@ body {
 .title-btns {
   display: flex;
   align-items: center;
-  gap: 3%;
+  gap: 15px;
   animation: fade 2.75s forwards;
 }
 .title-pic {
@@ -117,37 +207,7 @@ body {
   align-items: center;
   filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.5));
 }
-.title-btns button {
-  border-radius: 100px;
-  color: black;
-  background-color: white;
-  font-family: "Salsa";
-  padding: 15px;
-  background-image: linear-gradient(60deg, #ffc300, #003566);
-  background-size: 0% 100%;
-  background-position-x: right;
-  transition: background-image 0.4s, background-size 0.4s, color 0.3s;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.title-btns button:hover {
-  background-size: 100% 100%;
-  background-position-x: left;
-  color: #c7c7c7;
-}
-/* .title-btns button:hover {
-  background-color: #ffd60a;
-  color: black;
-  box-shadow: 2px 2px 0px #003566;
-  transition: 0.2s ease-in-out;
-}
-.title-btns button:active {
-  transform: translateY(4px);
-  background-color: #db4444;
-  color: black;
-  box-shadow: none;
-} */
+
 .intro {
   display: flex;
   gap: 20px;
@@ -168,13 +228,17 @@ body {
 .btn-circle {
   border-radius: 100px;
   background-color: #003566;
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   box-shadow: 2px 2px 0px #ffc300;
+}
+.btn-circle img {
+  width: 35px;
+  height: 35px;
 }
 .btn-circle:hover {
   background-color: black;
@@ -193,14 +257,21 @@ hr {
   background-color: grey;
   width: 100%;
 }
+.work-description hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, #003566, grey);
+  border-radius: 2px;
+}
 .second-body {
-  padding: 6%;
+  padding: 2%;
   color: white;
   animation: fade 3s forwards;
 }
 .work-title h1 {
   font-family: "Bebas Neue";
   font-size: 76px;
+  margin-top: 10px;
   font-weight: 600;
   color: #ffc300;
   filter: drop-shadow(2px 2px #003566);
@@ -292,6 +363,10 @@ hr {
 }
 .link-git a:active {
   color: #003566;
+}
+.link-git img {
+  width: 35px;
+  height: 35px;
 }
 
 .footer {
@@ -417,16 +492,26 @@ hr {
 }
 .about-info {
   display: flex;
-  gap: 200px;
+  gap: 120px;
   padding: 5%;
   justify-content: center;
 }
 .about-info h1 {
   font-family: "Bebas Neue";
-  font-size: 101px;
+  font-size: 110px;
   font-weight: 600;
   color: #ffc300;
   width: 100%;
+  text-align: center;
+  filter: drop-shadow(2px 2px #003566);
+}
+.about-info h2 {
+  font-family: "Bebas Neue";
+  font-size: 110px;
+  font-weight: 600;
+  color: #ffc300;
+  width: 100%;
+  text-align: center;
   filter: drop-shadow(2px 2px #003566);
 }
 .about-para {
@@ -447,14 +532,54 @@ hr {
   font-weight: 400;
   color: #c7c7c7;
 }
-.download button {
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  font-family: "Salsa";
-  font-size: 15px;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+.download {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+.download-btn {
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #003566, #ffc300);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Salsa";
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.download-btn:hover::before {
+  left: 100%;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.download-btn:active {
+  transform: scale(0.95);
+  background: linear-gradient(90deg, #e6ac00, #ff4b2b);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
 .contact-info {
   display: flex;
   padding: 6%;
@@ -499,7 +624,7 @@ hr {
   text-decoration: underline;
   transition: 0.3s ease-in-out;
 }
-.single-icon a:active{
+.single-icon a:active {
   color: #003566;
 }
 .about-exp {
@@ -509,8 +634,9 @@ hr {
   justify-content: center;
 }
 
-
 .exp-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   color: #ffffff;
   align-items: center;
@@ -522,7 +648,7 @@ hr {
   font-weight: 500;
 }
 .exp-title h4 {
-  color: #003566;
+  color: #457b9d;
   font-size: 16px;
   font-weight: 400;
 }
@@ -559,65 +685,8 @@ hr {
 }
 .top-btn:active {
   transform: translateY(4px);
-  background-color:#db4444;
+  background-color: #db4444;
   box-shadow: none;
-}
-.navbar3 {
-  display: none;
-}
-.navbar4 {
-  display: none;
-}
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-btn {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.dropdown-btn.open {
-  transform: rotate(180deg);
-  width: 30px;
-  height: 30px;
-  opacity: 0.8;
-}
-
-.dropdown-list {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 40px;
-  width: 150px;
-  background-color: #003566;
-  padding: 2%;
-  border-radius: 5px;
-  z-index: 100;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.dropdown-list.show {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.dropdown-item {
-  font-family: "Righteous";
-  font-size: 15px;
-  display: block;
-  text-align: center;
-  filter: drop-shadow(2px 2px #000814);
-  text-decoration: none;
-  color: #ffc300;
-  padding: 8px 8px;
-  transition: background 0.3s ease-in-out;
 }
 
 /*responsive section*/
@@ -643,48 +712,32 @@ hr {
     margin-top: 20px;
     text-align: center;
   }
-  .navbar {
-    display: none;
-  }
-  .navbar2 {
-    display: none;
-  }
-  .navbar3 {
-    display: flex;
-    backdrop-filter: blur(8px);
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
-    top: 0;
-    padding: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar4 {
-    display: flex;
-    backdrop-filter: blur(8px);
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
-    top: 0;
-    padding: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 @media (max-width: 666px) {
+  .second-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
   .work-title h1 {
-    font-size: 60px;
+    font-size: 55px;
     text-align: center;
+  }
+  .work-title p {
+    font-size: 16px;
   }
   .work-project {
     justify-content: center;
     align-items: center;
     display: flex;
+    gap: 30px;
+  }
+  .work-description hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #003566, grey);
+    border-radius: 2px;
   }
   .work-project p {
     font-size: 15px;
@@ -762,11 +815,19 @@ hr {
     text-align: center;
     margin-top: 30px;
   }
+  .about-info h2 {
+    font-size: 60px;
+    text-align: center;
+  }
   .about-para h3 {
     font-size: 15px;
   }
-  .about-para p {
+  .about-para h4 {
     font-size: 12px;
+  }
+
+  .about-para p {
+    font-size: 15px;
   }
   .title-btns {
     width: 100%;
