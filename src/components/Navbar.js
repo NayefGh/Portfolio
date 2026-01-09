@@ -9,7 +9,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <div className="navbar-title">
           <Link to="/home" className="nav-title">
             Portfolio

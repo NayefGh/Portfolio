@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import TopBtn from "./components/TopBtn";
 import { useEffect } from "react";
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

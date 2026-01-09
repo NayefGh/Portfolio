@@ -98,23 +98,41 @@ const About2 = () => {
         <hr />
         <div className="about-info" id="exp">
           <h2>MY EXPERIENCE</h2>
-          <div className="about-para">
-            <div className="exp-title">
-              <div className="exp-right">
-                <h3>Front End Developer Intern</h3>
-                <h4>areeba/ Beirut-Lebanon</h4>
+          <div className="about2-group">
+            <div className="about-para">
+              <div className="exp-title">
+                <div className="exp-right">
+                  <h3>Front End Developer Intern</h3>
+                  <h4>areeba/ Beirut-Lebanon</h4>
+                </div>
+                <h5>Mar 2024 - May 2024</h5>
               </div>
-              <h5>March 2024 - May 2024</h5>
+              <p>
+                Developed responsive web pages using React JS, & JavaScript
+                enhancing user experience. Collaborated with design and backend
+                teams to ensure seamless integration and functionality. Also,
+                optimized web performance, reducing load times and improving
+                overall site efficiency. Implemented best practices in front-end
+                development, contributing to higher code quality and
+                maintainability
+              </p>
             </div>
-            <p>
-              Developed responsive web pages using React JS, JavaScript, and
-              TypeScript, enhancing user experience. Collaborated with design
-              and backend teams to ensure seamless integration and
-              functionality. Also, optimized web performance, reducing load
-              times and improving overall site efficiency. Implemented best
-              practices in front-end development, contributing to higher code
-              quality and maintainability
-            </p>
+            <div className="about-para">
+              <div className="exp-title">
+                <div className="exp-right">
+                  <h3>Dispatcher (Remotely)</h3>
+                  <h4>A1 Elite Logistics/ Dearborn - Michigan</h4>
+                </div>
+                <h5>Oct 2021 - Feb 2024</h5>
+              </div>
+              <p>
+                Streamlined office operations, improving overall efficiency and
+                reducing administrative overhead by 20%. I also implemented a
+                digital booking system that enhanced load management and reduced
+                errors by 15%. In addition, I handled the dispatching of truck
+                drivers by assigning loads for delivery across various states.
+              </p>
+            </div>
           </div>
         </div>
         <hr />
