@@ -9,7 +9,7 @@ const Work = () => {
     <div id="work">
       <div className="second-body">
         <div className="work-title">
-          <h1>Featured Work</h1>
+          <h1>Personal Work</h1>
           <p>
             Here are some of the selected projects that showcase my passion for
             front-end development.
@@ -104,11 +104,16 @@ const Work = () => {
               <div className="work-pic">
                 <img src={marley} alt="" />
               </div>
-              <div className="link-git">
-                <a href="https://github.com/NayefGh/Small-Business">
-                  SEE ON GITHUB
+              <div className="link-try">
+                <div className="link-git">
+                  <a href="https://github.com/NayefGh/Small-Business">
+                    SEE ON GITHUB
+                  </a>
+                  <img src={git} alt="" />
+                </div>
+                <a className="try" href="https://marleys-lb.netlify.app/">
+                  TRY ME
                 </a>
-                <img src={git} alt="" />
               </div>
             </div>
           </div>

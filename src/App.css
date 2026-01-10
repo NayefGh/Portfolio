@@ -349,7 +349,7 @@ hr {
 .link-git {
   display: flex;
   align-items: center;
-  gap: 2%;
+  gap: 10px;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -369,7 +369,23 @@ hr {
   width: 35px;
   height: 35px;
 }
-
+.link-try {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.try {
+  font-family: "poppins";
+  color: #ffc300;
+  font-style: italic;
+  text-decoration: none;
+}
+.try:hover {
+  color: #457b9d;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+}
 .footer {
   color: #c7c7c7;
   font-family: "poppins";
@@ -520,7 +536,7 @@ hr {
   flex-direction: column;
   gap: 15px;
 }
-.about2-group{
+.about2-group {
   display: flex;
   flex-direction: column;
   gap: 50px;
