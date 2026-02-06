@@ -112,7 +112,7 @@ const Work = () => {
                   <img src={git} alt="" />
                 </div>
                 <a className="try" href="https://marleys-lb.netlify.app/">
-                  TRY ME
+                  Try Me
                 </a>
               </div>
             </div>
