@@ -1,29 +1,98 @@
-import What from "../icons/whatsapp.png";
-import Mail from "../icons/mail.png";
-import link from "../icons/linkin.png";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (loading) return; // prevents double click
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_b9fxnyo",
+        "template_wqm5mhr",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "PhlSsKuAHh4LI1ATH",
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Failed to send message.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
-    <div id="contact">
-      <div className="contact-info">
-        <h1>Contact Me</h1>
-        <div className="contact-icons">
-          <div className="single-icon">
-            <img src={What} alt="" />
-            <a href="https://Wa.me/+96178964649">Lets Chat</a>
-          </div>
-          <div className="single-icon">
-            <img src={Mail} alt="" />
-            <p>nayefghtaimy@hotmail.com</p>
-          </div>
-          <div className="single-icon">
-            <img src={link} alt="" />
-            <a href="https://www.linkedin.com/in/nayef-ghtaimy-5a8298303/">
-              Nayef Ghtaimy
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="contact" id="contact">
+      <h2>Contact Me</h2>
+
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+
+        <button type="submit" disabled={loading} className="send-btn">
+          {loading ? (
+            <>
+              <span className="spinner"></span>
+              Sending...
+            </>
+          ) : (
+            "Send Message"
+          )}
+        </button>
+      </form>
     </div>
   );
 };
