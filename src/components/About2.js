@@ -121,7 +121,7 @@ const About2 = () => {
               <div className="exp-title">
                 <div className="exp-right">
                   <h3>Dispatcher (Remotely)</h3>
-                  <h4>A1 Elite Logistics/ Dearborn - Michigan</h4>
+                  <h4>A1 Elite Logistics/ Dearborn, MI - USA</h4>
                 </div>
                 <h5>Oct 2021 - Feb 2024</h5>
               </div>

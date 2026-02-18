@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -19,7 +21,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (loading) return; // prevents double click
+    if (loading) return;
 
     setLoading(true);
 
@@ -32,10 +34,10 @@ const Contact = () => {
           email: formData.email,
           message: formData.message,
         },
-        "PhlSsKuAHh4LI1ATH",
+        "PhlSsKuAHh4LI1ATH"
       )
       .then(() => {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({
           name: "",
           email: "",
@@ -44,7 +46,7 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error(error);
-        alert("Failed to send message.");
+        toast.error("Failed to send message.");
       })
       .finally(() => {
         setLoading(false);
@@ -52,48 +54,52 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="contact">
-      <h2>Contact Me</h2>
+    <>
+      <div className="contact" id="contact">
+        <h2>Contact Me</h2>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-        <button type="submit" disabled={loading} className="send-btn">
-          {loading ? (
-            <>
-              <span className="spinner"></span>
-              Sending...
-            </>
-          ) : (
-            "Send Message"
-          )}
-        </button>
-      </form>
-    </div>
+          <button type="submit" disabled={loading} className="send-btn">
+            {loading ? (
+              <>
+                <span className="spinner"></span>
+                Sending...
+              </>
+            ) : (
+              "Send Message"
+            )}
+          </button>
+        </form>
+      </div>
+
+      <ToastContainer position="top-right" autoClose={2000} />
+    </>
   );
 };
 

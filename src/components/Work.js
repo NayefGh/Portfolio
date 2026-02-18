@@ -66,7 +66,7 @@ const Work = () => {
               <hr />
               <div className="work-info">
                 <p>Role</p>
-                <p>Front-end Developer</p>
+                <p>MERN Stack Developer</p>
               </div>
               <hr />
 
@@ -83,7 +83,7 @@ const Work = () => {
           </div>
           <hr />
           <div className="work-description">
-            <h2>FoodTruck / Small Business Website</h2>
+            <h2>Small Business Website</h2>
             <p>
               Successfully crafted a website for a small business for a food
               truck with responsive layout for mobile phones.
@@ -134,7 +134,7 @@ const Work = () => {
               <hr />
               <div className="work-info">
                 <p>Role</p>
-                <p>Front-end Developer</p>
+                <p>Full Stack Developer</p>
               </div>
               <hr />
               <div className="work-pic">
