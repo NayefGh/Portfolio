@@ -92,8 +92,9 @@ const About2 = () => {
           </div>
           <div className="skill-indiv">
             <img src={react} alt="" />
-            <p>React</p>
+            <p>React / React Native</p>
           </div>
+          
         </div>
         <hr />
         <div className="about-info" id="exp">
@@ -102,7 +103,7 @@ const About2 = () => {
             <div className="about-para">
               <div className="exp-title">
                 <div className="exp-right">
-                  <h3>Front End Developer Intern</h3>
+                  <h3>Front End Developer Internship</h3>
                   <h4>areeba/ Beirut-Lebanon</h4>
                 </div>
                 <h5>Mar 2024 - May 2024</h5>

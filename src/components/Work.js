@@ -146,6 +146,9 @@ const Work = () => {
                 </a>
                 <img src={git} alt="" />
               </div>
+               {/* <a className="try" href="https://weathers-web.netlify.app/">
+                  Try Me
+                </a> */}
             </div>
           </div>
         </div>

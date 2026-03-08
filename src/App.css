@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 * {
   padding: 0;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #000814;
+  background-color: #373d20;
 }
 
 /* .navbar {
@@ -60,12 +60,12 @@ body {
   text-decoration: none;
   font-family: "bebas neue";
   font-size: 30px;
-  color: white;
+  color: #eff1ed;
   font-weight: 600;
 }
 .nav-title:hover {
-  color: #ffc300;
-  filter: drop-shadow(2px 2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
   transition: 0.3s ease-in-out;
 }
 /* Desktop Links */
@@ -76,14 +76,14 @@ body {
 
 .nav-link {
   font-size: 20px;
-  color: #eaeaea;
+  color: #eff1ed;
   font-family: "Righteous";
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #ffc300;
-  filter: drop-shadow(2px 2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
   transition: 0.3s ease-in-out;
 }
 
@@ -104,7 +104,7 @@ body {
   display: block;
   width: 25px;
   height: 2px;
-  background: white;
+  background: #bcbd8b;
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -133,10 +133,9 @@ body {
   padding: 24px 0;
   gap: 24px;
   font-family: "Righteous";
-
   margin-top: 10px;
   transition: left 0.4s ease;
-  background: rgba(0, 53, 102);
+  background: #717744;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0 0 12px 12px;
@@ -147,14 +146,14 @@ body {
 }
 
 .mobile-link {
-  color: #ffc300;
+  color: #eff1ed;
   font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .mobile-link:hover {
-  color: #ff4b2b;
+  color: #db4444;
 }
 
 @media (max-width: 768px) {
@@ -178,15 +177,15 @@ body {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: #f0f7ee;
-  filter: drop-shadow(2px 2px #ffc300);
+  color: white;
+  filter: drop-shadow(2px 2px black);
   animation: fade 2.5s forwards;
 }
 .intro p {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 400;
-  font-family: "MuseoModerno";
-  color: #c7c7c7;
+  font-family: "ubuntu";
+  color: #bcbd8b;
   animation: fade 2.75s forwards;
 }
 .title-btns {
@@ -199,7 +198,7 @@ body {
 .title-pic {
   width: 60%;
   border-radius: 16px;
-  background: #c7c7c7;
+  background: #bcbd8b;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -231,28 +230,28 @@ body {
 
 .btn-circle {
   border-radius: 100px;
-  background-color: #003566;
+  background-color: #717744;
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #ffc300;
+  box-shadow: 2px 2px 0px black;
 }
 .btn-circle img {
   width: 35px;
   height: 35px;
 }
 .btn-circle:hover {
-  background-color: black;
-  box-shadow: 2px 2px 0px #003566;
+  filter: invert();
+  box-shadow: 2px 2px 0px white;
   transition: 0.2s ease-in-out;
 }
 .btn-circle:active {
-  transform: translateY(4px);
   filter: invert();
-  background-color: black;
+  transform: translateY(4px);
+  background-color: yellow;
   box-shadow: none;
 }
 hr {
@@ -264,13 +263,13 @@ hr {
 .work-description hr {
   border: none;
   height: 3px;
-  background: linear-gradient(90deg, #003566, grey);
+  background: linear-gradient(90deg, grey);
   border-radius: 2px;
 }
 
 .second-body {
   padding: 2%;
-  color: white;
+  color: #bcbd8b;
   animation: fade 3s forwards;
 }
 .work-title h1 {
@@ -278,11 +277,11 @@ hr {
   font-size: 76px;
   margin-top: 10px;
   font-weight: 600;
-  color: #ffc300;
-  filter: drop-shadow(2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
 }
 .work-title p {
-  color: #c7c7c7;
+  color: #eff1ed;
   font-size: 18px;
   font-family: "MuseoModerno";
 }
@@ -304,11 +303,11 @@ hr {
   background-color: #1a1a1a;
 }
 .work-description h2 {
-  color: #ffffff;
+  color: #eff1ed;
   font-size: 32px;
   font-family: "ubuntu";
   font-weight: 500;
-  filter: drop-shadow(1px 1px #ffd60a);
+  filter: drop-shadow(2px 1px black);
 }
 .work-description p {
   font-size: 16px;
@@ -328,14 +327,14 @@ hr {
   border-radius: 12px;
 }
 .project-info {
-  color: #ffd60a;
+  color: #eff1ed;
   font-family: "poppins";
 }
 .project-info h1 {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 2%;
-  color: #ffd60a;
+  color: #eff1ed;
 }
 .work-info {
   display: flex;
@@ -359,15 +358,15 @@ hr {
 }
 .link-git a {
   text-decoration: none;
-  color: #ffc300;
+  color: #eff1ed;
 }
 .link-git a:hover {
-  color: #db4444;
+  color: #bcbd8b;
   transition: 0.2s ease-in-out;
   text-decoration: underline;
 }
 .link-git a:active {
-  color: #003566;
+  color: #766153;
 }
 .link-git img {
   width: 35px;
@@ -393,8 +392,8 @@ hr {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
-  color: #ffc300;
-  filter: drop-shadow(2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
 }
 
 .contact-form {
@@ -425,8 +424,8 @@ hr {
   width: 100%;
   border: none;
   border-radius: 6px;
-  background-color: #e6ac00;
-  color: #003566;
+  background-color: #717744;
+  color: black;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -435,8 +434,8 @@ hr {
 }
 
 .contact-form button:hover {
-  background-color: #003566;
-  color: #e6ac00;
+  background-color: black;
+  color: #eff1ed;
 }
 
 .contact-info {
@@ -472,7 +471,6 @@ hr {
   cursor: not-allowed;
 }
 
-
 .footer {
   color: #c7c7c7;
   font-family: "poppins";
@@ -494,11 +492,11 @@ hr {
   font-size: 101px;
   font-weight: 600;
   width: 100%;
-  color: #ffc300;
-  filter: drop-shadow(2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
 }
 .second-title {
-  color: #c7c7c7;
+  color: #eff1ed;
   font-family: "poppins";
   display: flex;
   flex-direction: column;
@@ -508,8 +506,8 @@ hr {
   font-family: "ubuntu";
   font-size: 32px;
   font-weight: 500;
-  color: #ffffff;
-  filter: drop-shadow(1px 1px #ffc300);
+  color: #eff1ed;
+  filter: drop-shadow(2px 2px black);
 }
 .second-title p {
   font-family: "MuseoModerno";
@@ -518,19 +516,19 @@ hr {
   color: #c7c7c7;
 }
 .more-info {
-  color: #ffc300;
+  color: #717744;
   text-decoration: none;
 }
 .more-info:hover {
-  color: #db4444;
+  color: #eff1ed;
   text-decoration: underline;
   transition: 0.2s ease-in-out;
 }
 .more-info:active {
-  color: #003566;
+  color: #766153;
 }
 .about-pic {
-  background: #c7c7c7;
+  background: #bcbd8b;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -560,10 +558,10 @@ hr {
 }
 .about-skill {
   font-family: "Bebas Neue";
-  font-size: 76px;
+  font-size: 101px;
   font-weight: 600;
-  color: #ffc300;
-  filter: drop-shadow(2px 2px #003566);
+  color: #bcbd8b;
+  filter: drop-shadow(2px 2px black);
 }
 .skill-icon {
   display: flex;
@@ -582,11 +580,13 @@ hr {
   width: 80px;
   height: 80px;
   border-radius: 3px;
+  filter: drop-shadow(1px 1px black);
 }
 .skill-indiv p {
-  color: #c7c7c7;
+  color: #bcbd8b;
   font-size: 18px;
   font-weight: 500;
+  filter: drop-shadow(1px 1px black);
   font-family: "MuseoModerno";
 }
 .about2 hr {
@@ -603,19 +603,19 @@ hr {
   font-family: "Bebas Neue";
   font-size: 110px;
   font-weight: 600;
-  color: #ffc300;
+  color: #bcbd8b;
   width: 100%;
   text-align: center;
-  filter: drop-shadow(2px 2px #003566);
+  filter: drop-shadow(2px 2px black);
 }
 .about-info h2 {
   font-family: "Bebas Neue";
   font-size: 110px;
   font-weight: 600;
-  color: #ffc300;
+  color: #bcbd8b;
   width: 100%;
   text-align: center;
-  filter: drop-shadow(2px 2px #003566);
+  filter: drop-shadow(2px 2px black);
 }
 .about-para {
   display: flex;
@@ -631,8 +631,8 @@ hr {
   font-family: "ubuntu";
   font-size: 32px;
   font-weight: 500;
-  color: #ffffff;
-  filter: drop-shadow(1px 1px #ffc300);
+  color: #bcbd8b;
+  filter: drop-shadow(1px 1px black);
 }
 .about-para p {
   font-family: "MuseoModerno";
@@ -648,8 +648,8 @@ hr {
 
 .download-btn {
   padding: 14px 28px;
-  background: linear-gradient(90deg, #003566, #ffc300);
-  color: white;
+  background: linear-gradient(90deg, #717744, #373d20);
+  color: black;
   font-size: 18px;
   font-weight: bold;
   font-family: "ubuntu";
@@ -682,6 +682,7 @@ hr {
 
 .download-btn:hover {
   transform: translateY(-2px) scale(1.05);
+  color: white;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 .download-btn:active {
@@ -725,7 +726,7 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
   display: flex;
-  color: #ffffff;
+  color: #bcbd8b;
   align-items: center;
   justify-content: space-between;
   font-family: "ubuntu";
@@ -735,7 +736,7 @@ hr {
   font-weight: 500;
 }
 .exp-title h4 {
-  color: #457b9d;
+  color: black;
   font-size: 20px;
   font-weight: 400;
 }
@@ -746,25 +747,27 @@ hr {
 }
 .try {
   font-family: "poppins";
-  background-color: #003566;
+  background-color: #717744;
   display: flex;
   padding: 5px;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #ffc300;
-  color: #ffc300;
+  box-shadow: 2px 2px 0px black;
+  color: black;
+  font-weight: 600;
   font-family: "poppins";
   text-decoration: none;
 }
 .try:hover {
-  background-color: black;
-  box-shadow: 2px 2px 0px #003566;
+  background-color: white;
+  font-weight: 600;
+  box-shadow: 2px 2px 0px black;
   transition: 0.2s ease-in-out;
 }
 .try:active {
   transform: translateY(4px);
   background-color: #eaeaea;
-  color: #003566;
+  color: #db4444;
   box-shadow: none;
 }
 .top-btn-func {
@@ -774,7 +777,7 @@ hr {
 }
 .top-btn {
   border-radius: 100px;
-  background-color: #003566;
+  background-color: #717744;
   width: 40px;
   height: 40px;
   display: flex;
@@ -786,11 +789,10 @@ hr {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  box-shadow: 2px 2px 0px #ffc300;
+  box-shadow: 2px 2px 0px black;
 }
 .top-btn:hover {
-  background-color: black;
-  box-shadow: 2px 2px 0px #003566;
+  background-color: white;
   transition: 0.2s ease-in-out;
 }
 .top-btn:active {
@@ -850,7 +852,7 @@ hr {
   .work-description hr {
     border: none;
     height: 3px;
-    background: linear-gradient(90deg, #003566, grey);
+    background: linear-gradient(90deg, #717744, grey);
     border-radius: 2px;
   }
   .work-project p {
@@ -911,14 +913,18 @@ hr {
     text-align: center;
   }
   .about-para h3 {
-    font-size: 15px;
+    font-size: 18px;
   }
   .about-para h4 {
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 600;
   }
 
+ .about-para h5 {
+    font-size: 14px;
+  }
   .about-para p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .title-btns {
     width: 100%;
@@ -953,8 +959,8 @@ hr {
     font-family: "Bebas Neue";
     font-size: 60px;
     font-weight: 600;
-    color: #ffc300;
-    filter: drop-shadow(2px 2px #003566);
+    color: #bcbd8b;
+    filter: drop-shadow(2px 2px black);
   }
 
   .contact-form {
@@ -985,8 +991,8 @@ hr {
     width: 100%;
     border: none;
     border-radius: 6px;
-    background-color: #e6ac00;
-    color: #003566;
+    background-color: #717744;
+    color: black;
     cursor: pointer;
     font-size: 15px;
     font-weight: 500;
@@ -995,8 +1001,8 @@ hr {
   }
 
   .contact-form button:hover {
-    background-color: #003566;
-    color: #e6ac00;
+    background-color: black;
+    color: #eff1ed;
   }
 
   .contact-info {
