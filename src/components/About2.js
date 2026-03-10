@@ -4,7 +4,6 @@ import js from "../icons/js.png";
 import ht from "../icons/ht.png";
 import css from "../icons/css.png";
 import react from "../icons/rt.png";
-import Pic2 from "../icons/pic2.png";
 import link from "../icons/linkin.png";
 import git from "../icons/github.png";
 import Footer from "../components/Footer";
@@ -48,7 +47,6 @@ const About2 = () => {
               Learning more to improve my skills.
             </p>
             <div className="title-btns">
-              <div className="download">
                 <button
                   className="download-btn"
                   onClick={() => {
@@ -57,13 +55,12 @@ const About2 = () => {
                 >
                   DOWNLOAD RESUME
                 </button>
-              </div>
-              <div className="btn-circle">
+              <div className="download-btn">
                 <a href="https://github.com/NayefGh">
                   <img src={git} alt="" />
                 </a>
               </div>
-              <div className="btn-circle">
+              <div className="download-btn">
                 <a href="https://www.linkedin.com/in/nayef-ghtaimy-5a8298303/">
                   <img src={link} alt="" />
                 </a>
@@ -71,30 +68,27 @@ const About2 = () => {
             </div>
           </div>
         </div>
-        <div className="about-pic">
-          <img className="first-pic" src={Pic2} alt="" />
-        </div>
-        <h2 id="skills" className="about-skill">
-          MY SKILLS
-        </h2>
-        <div className="skill-icon">
-          <div className="skill-indiv">
-            <img src={js} alt="" />
-            <p>Javascript</p>
+        <hr/>
+        <div className="about-skill" id="skills">
+          <h2>MY SKILLS</h2>
+          <div className="skill-icon">
+            <div className="skill-indiv">
+              <img src={js} alt="" />
+              <p>Javascript</p>
+            </div>
+            <div className="skill-indiv">
+              <img src={ht} alt="" />
+              <p>HTML</p>
+            </div>
+            <div className="skill-indiv">
+              <img src={css} alt="" />
+              <p>Cascading Style Sheets (CSS)</p>
+            </div>
+            <div className="skill-indiv">
+              <img src={react} alt="" />
+              <p>React / React Native</p>
+            </div>
           </div>
-          <div className="skill-indiv">
-            <img src={ht} alt="" />
-            <p>HTML</p>
-          </div>
-          <div className="skill-indiv">
-            <img src={css} alt="" />
-            <p>Cascading Style Sheets (CSS)</p>
-          </div>
-          <div className="skill-indiv">
-            <img src={react} alt="" />
-            <p>React / React Native</p>
-          </div>
-          
         </div>
         <hr />
         <div className="about-info" id="exp">

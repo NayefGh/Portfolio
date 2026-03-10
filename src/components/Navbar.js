@@ -16,12 +16,13 @@ const Navbar = () => {
         </div>
 
         <div className="nav-links">
-          <Link to="#work" smooth className="nav-link">
-            Work
-          </Link>
           <Link to="#about" smooth className="nav-link">
             About
           </Link>
+          <Link to="#work" smooth className="nav-link">
+            Work
+          </Link>
+
           <Link to="#contact" smooth className="nav-link">
             Contact
           </Link>
@@ -38,11 +39,11 @@ const Navbar = () => {
       </div>
 
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <Link to="#work" smooth className="mobile-link" onClick={toggleMenu}>
-          Work
-        </Link>
         <Link to="#about" smooth className="mobile-link" onClick={toggleMenu}>
           About
+        </Link>
+        <Link to="#work" smooth className="mobile-link" onClick={toggleMenu}>
+          Work
         </Link>
         <Link to="#contact" smooth className="mobile-link" onClick={toggleMenu}>
           Contact

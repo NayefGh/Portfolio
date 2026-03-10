@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #373d20;
+  background-color: white;
 }
 
 /* .navbar {
@@ -60,13 +60,23 @@ body {
   text-decoration: none;
   font-family: "bebas neue";
   font-size: 30px;
-  color: #eff1ed;
-  font-weight: 600;
-}
-.nav-title:hover {
   color: #bcbd8b;
-  filter: drop-shadow(2px 2px black);
-  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  filter: drop-shadow(1px 1px black);
+}
+.nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: 0.25s;
+}
+.nav-title:hover::after {
+  transform: scaleX(1);
 }
 /* Desktop Links */
 .nav-links {
@@ -76,15 +86,27 @@ body {
 
 .nav-link {
   font-size: 20px;
-  color: #eff1ed;
+  color: #bcbd8b;
+  filter: drop-shadow(1px 1px black);
   font-family: "Righteous";
   text-decoration: none;
+  position: relative;
+  cursor: pointer;
 }
 
-.nav-link:hover {
-  color: #bcbd8b;
-  filter: drop-shadow(2px 2px black);
-  transition: 0.3s ease-in-out;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: 0.25s;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .hamburger {
@@ -104,7 +126,7 @@ body {
   display: block;
   width: 25px;
   height: 2px;
-  background: #bcbd8b;
+  background: black;
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -135,7 +157,7 @@ body {
   font-family: "Righteous";
   margin-top: 10px;
   transition: left 0.4s ease;
-  background: #717744;
+  background: black;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0 0 12px 12px;
@@ -146,7 +168,8 @@ body {
 }
 
 .mobile-link {
-  color: #eff1ed;
+  color: #bcbd8b;
+  filter: drop-shadow(1px 1px black);
   font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -168,16 +191,18 @@ body {
 
 .first-body {
   display: flex;
-  padding: 6%;
   align-items: center;
+  justify-content: center;
+  padding: 5%;
+  width: 100%;
   gap: 2%;
   margin-top: 8%;
 }
 .intro h1 {
   font-family: "Bebas Neue";
-  font-size: 101px;
+  font-size: 150px;
   font-weight: 600;
-  color: white;
+  color: #bcbd8b;
   filter: drop-shadow(2px 2px black);
   animation: fade 2.5s forwards;
 }
@@ -185,7 +210,8 @@ body {
   font-size: 25px;
   font-weight: 400;
   font-family: "ubuntu";
-  color: #bcbd8b;
+  color: black;
+  filter: drop-shadow(1px 1px grey);
   animation: fade 2.75s forwards;
 }
 .title-btns {
@@ -214,6 +240,8 @@ body {
 .intro {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -243,17 +271,7 @@ body {
   width: 35px;
   height: 35px;
 }
-.btn-circle:hover {
-  filter: invert();
-  box-shadow: 2px 2px 0px white;
-  transition: 0.2s ease-in-out;
-}
-.btn-circle:active {
-  filter: invert();
-  transform: translateY(4px);
-  background-color: yellow;
-  box-shadow: none;
-}
+
 hr {
   border: none;
   height: 2px;
@@ -263,13 +281,14 @@ hr {
 .work-description hr {
   border: none;
   height: 3px;
-  background: linear-gradient(90deg, grey);
+  background: linear-gradient(90deg, black);
   border-radius: 2px;
 }
 
 .second-body {
-  padding: 2%;
-  color: #bcbd8b;
+  padding: 3%;
+  color: black;
+  font-weight: 600;
   animation: fade 3s forwards;
 }
 .work-title h1 {
@@ -281,9 +300,9 @@ hr {
   filter: drop-shadow(2px 2px black);
 }
 .work-title p {
-  color: #eff1ed;
+  color: black;
   font-size: 18px;
-  font-family: "MuseoModerno";
+  font-family: "poppins";
 }
 .work-project {
   display: flex;
@@ -303,16 +322,16 @@ hr {
   background-color: #1a1a1a;
 }
 .work-description h2 {
-  color: #eff1ed;
+  color: #bcbd8b;
   font-size: 32px;
   font-family: "ubuntu";
   font-weight: 500;
   filter: drop-shadow(2px 1px black);
 }
 .work-description p {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "MuseoModerno";
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "ubuntu";
   margin-bottom: 2%;
 }
 .work-description {
@@ -326,15 +345,14 @@ hr {
   width: 100%;
   border-radius: 12px;
 }
-.project-info {
-  color: #eff1ed;
-  font-family: "poppins";
-}
+
 .project-info h1 {
-  font-size: 16px;
+  font-family: "poppins";
+  filter: drop-shadow(1px 1px black);
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 2%;
-  color: #eff1ed;
+  color: #bcbd8b;
 }
 .work-info {
   display: flex;
@@ -343,7 +361,7 @@ hr {
   justify-content: space-between;
 }
 .work-info p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 }
 .work-info hr {
@@ -358,7 +376,8 @@ hr {
 }
 .link-git a {
   text-decoration: none;
-  color: #eff1ed;
+  color: black;
+  font-family: "ubuntu";
 }
 .link-git a:hover {
   color: #bcbd8b;
@@ -366,7 +385,7 @@ hr {
   text-decoration: underline;
 }
 .link-git a:active {
-  color: #766153;
+  color: #db4444;
 }
 .link-git img {
   width: 35px;
@@ -382,7 +401,7 @@ hr {
 .contact {
   display: flex;
   flex-direction: row;
-  padding: 6%;
+  padding: 3%;
   justify-content: space-evenly;
   align-items: center;
   gap: 2%;
@@ -404,19 +423,46 @@ hr {
   gap: 15px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
   padding: 12px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 6px;
   font-size: 15px;
   font-family: "poppins";
+  outline: none;
 }
 
-.contact-form textarea {
+.input-group textarea {
   min-height: 120px;
   resize: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: grey;
+  font-size: 14px;
+  font-family: "poppins";
+  background: white;
+  padding: 0 4px;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: #717744;
 }
 
 .contact-form button {
@@ -424,7 +470,7 @@ hr {
   width: 100%;
   border: none;
   border-radius: 6px;
-  background-color: #717744;
+  background-color: #bcbd8b;
   color: black;
   cursor: pointer;
   font-size: 18px;
@@ -472,17 +518,17 @@ hr {
 }
 
 .footer {
-  color: #c7c7c7;
+  color: #717744;
   font-family: "poppins";
   display: flex;
-  font-size: 8px;
+  font-size: 9px;
   align-items: center;
   justify-content: center;
 }
 .third-body {
   display: flex;
   flex-direction: row;
-  padding: 6%;
+  padding: 3%;
   justify-content: space-evenly;
   align-items: center;
   gap: 2%;
@@ -506,26 +552,27 @@ hr {
   font-family: "ubuntu";
   font-size: 32px;
   font-weight: 500;
-  color: #eff1ed;
-  filter: drop-shadow(2px 2px black);
+  color: #bcbd8b;
+  filter: drop-shadow(1px 1px black);
 }
 .second-title p {
   font-family: "MuseoModerno";
   font-size: 18px;
   font-weight: 400;
-  color: #c7c7c7;
+  color: black;
 }
 .more-info {
-  color: #717744;
+  color: #bcbd8b;
+  font-weight: 700;
   text-decoration: none;
 }
 .more-info:hover {
-  color: #eff1ed;
+  color: #db4444;
   text-decoration: underline;
   transition: 0.2s ease-in-out;
 }
 .more-info:active {
-  color: #766153;
+  color: black;
 }
 .about-pic {
   background: #bcbd8b;
@@ -557,6 +604,12 @@ hr {
   animation: fade 2.5s forwards;
 }
 .about-skill {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-skill h2 {
   font-family: "Bebas Neue";
   font-size: 101px;
   font-weight: 600;
@@ -596,7 +649,7 @@ hr {
 .about-info {
   display: flex;
   gap: 120px;
-  padding: 5%;
+  padding: 3%;
   justify-content: center;
 }
 .about-info h1 {
@@ -638,13 +691,13 @@ hr {
   font-family: "MuseoModerno";
   font-size: 18px;
   font-weight: 400;
-  color: #c7c7c7;
+  color: black;
 }
-.download {
+/* .download {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-}
+} */
 
 .download-btn {
   padding: 14px 28px;
@@ -682,13 +735,18 @@ hr {
 
 .download-btn:hover {
   transform: translateY(-2px) scale(1.05);
-  color: white;
+  filter: invert();
+  background: linear-gradient(90deg, #8e88bb, #c8c2df);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 .download-btn:active {
   transform: scale(0.95);
   background: linear-gradient(90deg, #e6ac00, #ff4b2b);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.download-btn img {
+  width: 30px;
+  height: 30px;
 }
 
 .single-icon {
@@ -726,7 +784,6 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
   display: flex;
-  color: #bcbd8b;
   align-items: center;
   justify-content: space-between;
   font-family: "ubuntu";
@@ -736,18 +793,19 @@ hr {
   font-weight: 500;
 }
 .exp-title h4 {
+  font-style: italic;
   color: black;
   font-size: 20px;
   font-weight: 400;
 }
 .exp-title h5 {
-  color: #ffffff;
+  color: black;
   font-size: 20px;
   font-weight: 400;
 }
 .try {
   font-family: "poppins";
-  background-color: #717744;
+  background-color: #bcbd8b;
   display: flex;
   padding: 5px;
   border-radius: 6px;
@@ -777,7 +835,7 @@ hr {
 }
 .top-btn {
   border-radius: 100px;
-  background-color: #717744;
+  background-color: #bcbd8b;
   width: 40px;
   height: 40px;
   display: flex;
@@ -849,6 +907,7 @@ hr {
     display: flex;
     gap: 30px;
   }
+  
   .work-description hr {
     border: none;
     height: 3px;
@@ -856,10 +915,13 @@ hr {
     border-radius: 2px;
   }
   .work-project p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .project-info {
     font-size: 13px;
+  }
+  .project-info h2{
+    font-size: 15px;
   }
   .link-git img {
     width: 20px;
@@ -877,8 +939,19 @@ hr {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: fade 3s forwards;
   }
   .third-body h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  .about-skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-skill h2 {
     text-align: center;
     font-size: 60px;
   }
@@ -920,21 +993,25 @@ hr {
     font-weight: 600;
   }
 
- .about-para h5 {
+  .about-para h5 {
     font-size: 14px;
   }
   .about-para p {
     font-size: 14px;
   }
   .title-btns {
-    width: 100%;
+    padding: 5%;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  .download-btn{
+    font-size: 15px;
   }
   .download button {
     width: 80%;
     height: 60px;
-    font-size: 12px;
+    font-size: 10px;
   }
   .about-skill {
     font-size: 60px;

@@ -1,20 +1,21 @@
-import  { useState } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
@@ -32,7 +33,7 @@ const Contact = () => {
         {
           name: formData.name,
           email: formData.email,
-          message: formData.message,
+          message: formData.message
         },
         "PhlSsKuAHh4LI1ATH"
       )
@@ -41,11 +42,10 @@ const Contact = () => {
         setFormData({
           name: "",
           email: "",
-          message: "",
+          message: ""
         });
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
         toast.error("Failed to send message.");
       })
       .finally(() => {
@@ -59,31 +59,38 @@ const Contact = () => {
         <h2>Contact Me</h2>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <div className="input-group">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <label>Your Name</label>
+          </div>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <label>Your Email</label>
+          </div>
+
+          <div className="input-group">
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <label>Your Message</label>
+          </div>
 
           <button type="submit" disabled={loading} className="send-btn">
             {loading ? (
@@ -95,6 +102,7 @@ const Contact = () => {
               "Send Message"
             )}
           </button>
+
         </form>
       </div>
 
